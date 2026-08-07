@@ -52,7 +52,7 @@
   .herostage{position:relative;text-align:center;padding:2rem 0}
   .herostage .halo{position:absolute;inset:0;margin:auto;width:min(340px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--teal-tint) 0%,rgba(234,241,240,0) 70%)}
   .herostage .halo::after{content:";";position:absolute;font-family:Georgia,serif;font-size:22rem;color:rgba(20,85,95,.06);top:-4rem;right:-2rem;line-height:1}
-  .herostage svg{position:relative;width:100%;max-width:320px;filter:drop-shadow(0 20px 18px rgba(30,42,50,.18))}
+  .herostage img{position:relative;width:100%;max-width:340px;filter:drop-shadow(0 20px 18px rgba(30,42,50,.18))}
   .herostage .cap{position:relative;font-size:.85rem;color:var(--muted);margin-top:1rem}
   .herostage .cap b{color:var(--ink)}
 
@@ -68,10 +68,9 @@
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
   .product{background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--hairline);box-shadow:0 1px 3px rgba(30,42,50,.05);display:flex;flex-direction:column;transition:box-shadow .3s ease,border-color .3s ease}
   .product:hover{border-color:#D8CFBC;box-shadow:0 12px 32px rgba(30,42,50,.10)}
-  .art{position:relative;background:var(--cream-deep);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;padding:2.2rem}
-  .art.alt{background:var(--teal-tint)}
-  .art svg{width:78%;max-width:none;filter:drop-shadow(0 16px 14px rgba(30,42,50,.16));transition:transform .35s ease}
-  .product:hover .art svg{transform:scale(1.04)}
+  .art{position:relative;background:#fff;aspect-ratio:1/1;overflow:hidden;border-bottom:1px solid var(--hairline)}
+  .art img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+  .product:hover .art img{transform:scale(1.05)}
   .give{position:absolute;top:.9rem;left:.9rem;background:rgba(255,255,255,.85);backdrop-filter:blur(4px);padding:.25rem .7rem;border-radius:var(--radius-pill);font-size:.7rem;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;font-weight:600}
   .pbody{padding:1.4rem 1.5rem 1.6rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
   .pname{font-family:Georgia,serif;font-weight:700;font-size:1.15rem}
@@ -165,16 +164,6 @@
   </div>
 </header>
 
-<!-- Reusable tee silhouette -->
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <g id="teeShape">
-      <path d="M62 24 L84 12 Q100 30 116 12 L138 24 L176 48 L162 80 L144 68 L144 200 Q100 210 56 200 L56 68 L38 80 L24 48 Z" />
-      <path d="M84 12 Q100 34 116 12" fill="none" stroke="rgba(0,0,0,.25)" stroke-width="3"/>
-    </g>
-  </defs>
-</svg>
-
 <main id="top">
   <div class="hero">
     <div>
@@ -192,11 +181,7 @@
     </div>
     <div class="herostage">
       <div class="halo"></div>
-      <svg viewBox="0 0 200 220" aria-label="Still Here tee">
-        <use href="#teeShape" fill="#2B2F33"/>
-        <text x="100" y="105" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="21" fill="#F5EFE4">STILL</text>
-        <text x="100" y="132" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="21" fill="#F5EFE4">HERE<tspan fill="#E07A4A" font-size="25">;</tspan></text>
-      </svg>
+      <img src="img/tee-still-here-cut.png" alt="The Still Here Tee — black shirt with STILL HERE; printed on the chest">
       <div class="cap"><b>In memory of Max.</b><br>The Still Here Tee — our founding design. The semicolon means the story isn't over.</div>
     </div>
   </div>
@@ -210,11 +195,7 @@
       <div class="grid">
 
         <div class="product">
-          <div class="art"><span class="give">Gives back</span><svg viewBox="0 0 200 220" aria-label="Still Here tee">
-            <use href="#teeShape" fill="#2B2F33"/>
-            <text x="100" y="105" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="21" fill="#F5EFE4">STILL</text>
-            <text x="100" y="132" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="21" fill="#F5EFE4">HERE<tspan fill="#E07A4A" font-size="25">;</tspan></text>
-          </svg></div>
+          <div class="art"><span class="give">Gives back</span><img src="img/tee-still-here.jpg" alt="Black tee printed with STILL HERE;"></div>
           <div class="pbody">
             <div class="pname">The Still Here Tee</div>
             <div class="pdesc">Our founding design. The semicolon is the symbol of a story that keeps going.</div>
@@ -223,18 +204,7 @@
         </div>
 
         <div class="product">
-          <div class="art alt"><span class="give">Gives back</span><svg viewBox="0 0 200 220" aria-label="Sunrise tee">
-            <use href="#teeShape" fill="#14555F"/>
-            <g>
-              <clipPath id="sunClip"><rect x="60" y="78" width="80" height="34"/></clipPath>
-              <circle cx="100" cy="112" r="22" fill="#E07A4A" clip-path="url(#sunClip)"/>
-              <line x1="66" y1="114" x2="134" y2="114" stroke="#F5EFE4" stroke-width="3"/>
-              <line x1="74" y1="122" x2="126" y2="122" stroke="#F5EFE4" stroke-width="2" opacity=".7"/>
-              <line x1="82" y1="129" x2="118" y2="129" stroke="#F5EFE4" stroke-width="2" opacity=".4"/>
-            </g>
-            <text x="100" y="148" text-anchor="middle" font-family="Segoe UI,sans-serif" font-weight="600" font-size="10" letter-spacing="1.2" fill="#F5EFE4">TOMORROW</text>
-            <text x="100" y="161" text-anchor="middle" font-family="Segoe UI,sans-serif" font-weight="600" font-size="10" letter-spacing="1.2" fill="#F5EFE4">NEEDS YOU</text>
-          </svg></div>
+          <div class="art"><span class="give">Gives back</span><img src="img/tee-sunrise.jpg" alt="Navy tee printed with a rising sun and TOMORROW NEEDS YOU"></div>
           <div class="pbody">
             <div class="pname">The Sunrise Tee</div>
             <div class="pdesc">Because the sun keeps coming up — and tomorrow genuinely needs you in it.</div>
@@ -243,11 +213,7 @@
         </div>
 
         <div class="product">
-          <div class="art"><span class="give">Gives back</span><svg viewBox="0 0 200 220" aria-label="Keep Going tee">
-            <use href="#teeShape" fill="#FBF7EE" stroke="#C4B694" stroke-width="2"/>
-            <text x="100" y="108" text-anchor="middle" font-family="Segoe UI,sans-serif" font-weight="800" font-size="24" fill="#1E2A32">KEEP</text>
-            <text x="100" y="136" text-anchor="middle" font-family="Segoe UI,sans-serif" font-weight="800" font-size="24" fill="#1E2A32">GOING<tspan fill="#E07A4A">.</tspan></text>
-          </svg></div>
+          <div class="art"><span class="give">Gives back</span><img src="img/tee-keep-going.jpg" alt="White tee printed with KEEP GOING."></div>
           <div class="pbody">
             <div class="pname">The Keep Going Tee</div>
             <div class="pdesc">Two words that have gotten a lot of people through a lot of days.</div>
@@ -256,11 +222,7 @@
         </div>
 
         <div class="product">
-          <div class="art alt"><span class="give">Gives back</span><svg viewBox="0 0 200 220" aria-label="Heartbeat tee">
-            <use href="#teeShape" fill="#1F2A44"/>
-            <polyline points="60,118 78,118 86,100 96,134 104,110 110,118 126,118" fill="none" stroke="#7FC7C0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="136" y="126" font-family="Georgia,serif" font-weight="bold" font-size="26" fill="#E07A4A">;</text>
-          </svg></div>
+          <div class="art"><span class="give">Gives back</span><img src="img/tee-heartbeat.jpg" alt="Military green tee printed with a heartbeat line ending in a semicolon"></div>
           <div class="pbody">
             <div class="pname">The Heartbeat Tee</div>
             <div class="pdesc">A pulse that runs straight into a semicolon. Still beating, still writing.</div>
@@ -269,12 +231,7 @@
         </div>
 
         <div class="product">
-          <div class="art"><span class="give">Gives back</span><svg viewBox="0 0 200 220" aria-label="Classic logo tee">
-            <use href="#teeShape" fill="#9AA0A6"/>
-            <text x="100" y="106" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="22" fill="#1E2A32">MAX'S</text>
-            <text x="100" y="132" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="22" fill="#14555F">TEES<tspan fill="#E07A4A" font-size="24">;</tspan></text>
-            <text x="100" y="150" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="8" letter-spacing="2" fill="#1E2A32">WEAR HOPE &bull; EST. 2026</text>
-          </svg></div>
+          <div class="art"><span class="give">Gives back</span><img src="img/tee-logo.jpg" alt="Heather gray tee printed with the MAX'S TEES; logo"></div>
           <div class="pbody">
             <div class="pname">The Classic Logo Tee</div>
             <div class="pdesc">The flagship. Wear the name, carry the mission.</div>
@@ -283,11 +240,7 @@
         </div>
 
         <div class="product">
-          <div class="art alt"><span class="give">Gives back</span><svg viewBox="0 0 200 220" aria-label="You Matter tee">
-            <use href="#teeShape" fill="#5D4A7E"/>
-            <text x="100" y="115" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="20" fill="#F5EFE4">you matter<tspan fill="#F2B279">.</tspan></text>
-            <text x="100" y="138" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="8.5" letter-spacing="1.5" fill="#CBBFE0">SAY IT TO SOMEONE TODAY</text>
-          </svg></div>
+          <div class="art"><span class="give">Gives back</span><img src="img/tee-you-matter.jpg" alt="Sand tee printed with you matter. in italic serif"></div>
           <div class="pbody">
             <div class="pname">The You Matter Tee</div>
             <div class="pdesc">Sometimes the shirt says the thing before you find the words.</div>
