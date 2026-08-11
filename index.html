@@ -80,6 +80,17 @@
   .add{background:none;color:var(--ink);border:1.5px solid var(--ink);border-radius:var(--radius-pill);padding:.45rem 1.1rem;cursor:pointer;font-size:.85rem;font-weight:600;transition:all .2s ease}
   .add:hover{background:var(--ink);color:#fff}
 
+  .catpills{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin:-2rem 0 3rem}
+  .catpills a{border:1.5px solid var(--hairline);border-radius:var(--radius-pill);padding:.45rem 1.2rem;text-decoration:none;color:var(--ink);font-size:.9rem;font-weight:600;transition:all .2s ease}
+  .catpills a:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-tint)}
+  .colhead{margin:4rem 0 1.8rem;scroll-margin-top:6rem}
+  .colhead:first-of-type{margin-top:0}
+  .colhead h3{font-family:Georgia,serif;font-size:1.6rem;color:var(--ink)}
+  .colhead p{color:var(--muted);font-size:.95rem;margin-top:.2rem;max-width:44rem}
+  .comingsoon{border:1.5px dashed var(--hairline);border-radius:var(--radius);padding:2.5rem 2rem;text-align:center;background:var(--cream)}
+  .comingsoon .semi{font-family:Georgia,serif;font-size:2.2rem;color:var(--orange);line-height:1}
+  .comingsoon h4{font-family:Georgia,serif;font-size:1.2rem;margin:.6rem 0 .4rem}
+  .comingsoon p{color:var(--muted);font-size:.9rem;max-width:34rem;margin:0 auto}
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;text-align:center;margin-bottom:3.5rem}
   .stat .num{font-family:Georgia,serif;font-size:2.6rem;color:#F2B279;line-height:1.1}
   .stat .lab{font-size:.85rem;color:#CDE0DE;max-width:16rem;margin:.4rem auto 0}
@@ -190,7 +201,16 @@
     <div class="wrap">
       <div class="sechead">
         <h2>The Collection</h2>
-        <p>Original designs, printed on soft premium cotton only when you order — no warehouses, no waste. Every one gives back.</p>
+        <p>Original designs on heavy premium cotton, printed only when you order — no warehouses, no waste. Every shirt gives back.</p>
+      </div>
+      <div class="catpills">
+        <a href="#awareness">Awareness Collection</a>
+        <a href="#veteran">The Veteran Line</a>
+        <a href="#basics">The Basics</a>
+      </div>
+      <div class="colhead" id="awareness">
+        <h3>The Awareness Collection</h3>
+        <p>The heart of Max's Tees — designs that start conversations about hope, checking in, and asking for help.</p>
       </div>
       <div class="grid">
 
@@ -248,6 +268,65 @@
           </div>
         </div>
 
+      </div>
+
+      <div class="colhead" id="veteran">
+        <h3>The Veteran Line</h3>
+        <p>Edgier cuts for the brothers and sisters who served — built by two Marines who know the weight and the humor it takes to carry it. A portion of this line supports veteran suicide prevention.</p>
+      </div>
+      <div class="comingsoon">
+        <div class="semi">;</div>
+        <h4>First drop in the works</h4>
+        <p>The designs are on the press. If you served, this line is for you — bold, irreverent, and dead serious about one thing: we don't lose people on our watch.</p>
+      </div>
+
+      <div class="colhead" id="basics">
+        <h3>The Basics</h3>
+        <p>The same heavy premium cotton our graphics ride on — blank, in six colors. Every basic gives back too.</p>
+      </div>
+      <div class="grid">
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-white.jpg" alt="Blank white premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — White</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — White',18)">Add to Cart</button></div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-gray.jpg" alt="Blank heather gray premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — Heather Gray</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Heather Gray',18)">Add to Cart</button></div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-black.jpg" alt="Blank black premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — Black</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Black',18)">Add to Cart</button></div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-sand.jpg" alt="Blank sand premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — Sand</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Sand',18)">Add to Cart</button></div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-navy.jpg" alt="Blank navy premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — Navy</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Navy',18)">Add to Cart</button></div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-olive.jpg" alt="Blank military green premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — Military Green</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Military Green',18)">Add to Cart</button></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
