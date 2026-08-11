@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Veteran Line — Max's Tees</title>
+<meta name="description" content="The Veteran Line — edgier tees for those who served, from two Marines. A portion supports veteran suicide prevention.">
+<meta name="robots" content="noindex"><!-- remove at launch -->
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="crisis">Veterans in crisis: call <a href="tel:988">988</a> and press <b>1</b>, or text 838255 — the Veterans Crisis Line. Free, confidential, 24/7.</div>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">Max's Tees<span class="semi">;</span></a>
+    <nav>
+      <ul>
+        <li><a href="awareness.html">Awareness</a></li>
+        <li><a href="veteran-line.html" aria-current="page">Veteran Line</a></li>
+        <li><a href="basics.html">Basics</a></li>
+        <li class="hidesm"><a href="index.html#story">Max's Story</a></li>
+        <li><button class="cartbtn" onclick="toggleDrawer()">Cart (<span id="cartCount">0</span>)</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="pagehead">
+    <h1>The Veteran Line</h1>
+    <p>Edgier tees for the brothers and sisters who served — built by two Marines who know the weight and the humor it takes to carry it. A portion of this line supports veteran suicide prevention.</p>
+  </div>
+
+  <section class="band white" style="padding-top:3rem">
+    <div class="wrap">
+      <div class="comingsoon">
+        <div class="semi">;</div>
+        <h4>First drop in the works</h4>
+        <p>The designs are on the press. If you served, this line is for you — bold, irreverent, and dead serious about one thing: we don't lose people on our watch.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div>
+      <h4>Max's Tees<span class="semi">;</span></h4>
+      <p>An independent company founded in memory of Max. Printed to order in the USA. A portion of every sale supports suicide awareness and prevention — exact beneficiary and amounts will be published before our first sale.</p>
+      <div class="f988">In crisis or worried about someone? Call or text <a href="tel:988">988</a> (Suicide &amp; Crisis Lifeline) or chat at <a href="https://988lifeline.org">988lifeline.org</a>. Veterans: press <b>1</b>.</div>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <p><a href="awareness.html">The Awareness Collection</a></p>
+      <p><a href="veteran-line.html">The Veteran Line</a></p>
+      <p><a href="basics.html">The Basics</a></p>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <p><a href="index.html#mission">Where the Money Goes</a></p>
+      <p><a href="index.html#story">About Us</a></p>
+    </div>
+  </div>
+  <div class="copyright">&copy; 2026 Max's Tees. All rights reserved. &bull; Site preview — not yet accepting orders.</div>
+</footer>
+
+<div class="scrim" id="scrim" onclick="toggleDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="dhead"><strong>Your Cart</strong><button class="dclose" onclick="toggleDrawer()">&times;</button></div>
+  <div class="ditems" id="ditems"><div class="dempty">Your cart is empty — go find a shirt that says something.</div></div>
+  <div class="dfoot">
+    <div class="subtotal"><span>Subtotal</span><span id="subtotal">$0</span></div>
+    <button class="checkout" onclick="toast('Checkout opens at launch — thanks for previewing Max\'s Tees')">Checkout</button>
+    <div class="dnote">Preview mode: ordering goes live at launch.</div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

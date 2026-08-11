@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Basics — Max's Tees</title>
+<meta name="description" content="The Basics — blank heavy premium cotton tees in six colors. Every basic gives back.">
+<meta name="robots" content="noindex"><!-- remove at launch -->
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="crisis">If you or someone you love is struggling, call or text <a href="tel:988">988</a> — the Suicide &amp; Crisis Lifeline. Free, confidential, 24/7.</div>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">Max's Tees<span class="semi">;</span></a>
+    <nav>
+      <ul>
+        <li><a href="awareness.html">Awareness</a></li>
+        <li><a href="veteran-line.html">Veteran Line</a></li>
+        <li><a href="basics.html" aria-current="page">Basics</a></li>
+        <li class="hidesm"><a href="index.html#story">Max's Story</a></li>
+        <li><button class="cartbtn" onclick="toggleDrawer()">Cart (<span id="cartCount">0</span>)</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="pagehead">
+    <h1>The Basics</h1>
+    <p>The same heavy premium cotton our graphics ride on — blank, in six colors, printed nothing, promising everything. Every basic gives back too.</p>
+  </div>
+
+  <section class="band white" style="padding-top:3rem">
+    <div class="wrap">
+      <div class="grid">
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-white.jpg" alt="Blank white premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — White</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — White',18)">Add to Cart</button></div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-gray.jpg" alt="Blank heather gray premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — Heather Gray</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Heather Gray',18)">Add to Cart</button></div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-black.jpg" alt="Blank black premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — Black</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Black',18)">Add to Cart</button></div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-sand.jpg" alt="Blank sand premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — Sand</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Sand',18)">Add to Cart</button></div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-navy.jpg" alt="Blank navy premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — Navy</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Navy',18)">Add to Cart</button></div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="art"><span class="give">Gives back</span><img src="img/basic-olive.jpg" alt="Blank military green premium tee"></div>
+          <div class="pbody">
+            <div class="pname">The Basic Tee — Military Green</div>
+            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Military Green',18)">Add to Cart</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div>
+      <h4>Max's Tees<span class="semi">;</span></h4>
+      <p>An independent company founded in memory of Max. Printed to order in the USA. A portion of every sale supports suicide awareness and prevention — exact beneficiary and amounts will be published before our first sale.</p>
+      <div class="f988">In crisis or worried about someone? Call or text <a href="tel:988">988</a> (Suicide &amp; Crisis Lifeline) or chat at <a href="https://988lifeline.org">988lifeline.org</a>. Veterans: press <b>1</b>.</div>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <p><a href="awareness.html">The Awareness Collection</a></p>
+      <p><a href="veteran-line.html">The Veteran Line</a></p>
+      <p><a href="basics.html">The Basics</a></p>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <p><a href="index.html#mission">Where the Money Goes</a></p>
+      <p><a href="index.html#story">About Us</a></p>
+    </div>
+  </div>
+  <div class="copyright">&copy; 2026 Max's Tees. All rights reserved. &bull; Site preview — not yet accepting orders.</div>
+</footer>
+
+<div class="scrim" id="scrim" onclick="toggleDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="dhead"><strong>Your Cart</strong><button class="dclose" onclick="toggleDrawer()">&times;</button></div>
+  <div class="ditems" id="ditems"><div class="dempty">Your cart is empty — go find a shirt that says something.</div></div>
+  <div class="dfoot">
+    <div class="subtotal"><span>Subtotal</span><span id="subtotal">$0</span></div>
+    <button class="checkout" onclick="toast('Checkout opens at launch — thanks for previewing Max\'s Tees')">Checkout</button>
+    <div class="dnote">Preview mode: ordering goes live at launch.</div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

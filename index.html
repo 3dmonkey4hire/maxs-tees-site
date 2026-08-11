@@ -6,156 +6,7 @@
 <title>Max's Tees — Wear Hope. Start Conversations.</title>
 <meta name="description" content="Max's Tees — a t-shirt company founded in memory of Max. A portion of every sale supports suicide awareness and prevention.">
 <meta name="robots" content="noindex"><!-- remove at launch: keeps the preview out of search engines -->
-<style>
-  :root{
-    --cream:#FAF6EF; --cream-deep:#F1EBDF; --ink:#1E2A32; --teal:#14555F;
-    --teal-tint:#EAF1F0; --teal-dark:#0E434C; --orange:#E07A4A; --orange-dark:#C96636;
-    --card:#FFFFFF; --muted:#5C6B72; --body:#3C4A52; --hairline:#E8E0D2;
-    --radius:14px; --radius-pill:999px;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
-  h1,h2,h3,.brand{font-family:Georgia,"Times New Roman",serif}
-  section{scroll-margin-top:5.5rem}
-  .wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px}
-  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
-
-  .crisis{background:var(--ink);color:#F5EFE4;text-align:center;font-size:.875rem;padding:.55rem 1rem}
-  .crisis a{color:#F2B279;font-weight:700;text-decoration:underline;text-underline-offset:2px}
-
-  header{position:sticky;top:0;z-index:50;background:rgba(250,246,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
-  .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.5rem}
-  .brand{font-size:1.5rem;font-weight:700;color:var(--teal);text-decoration:none;letter-spacing:.5px}
-  .brand .semi{color:var(--orange);font-weight:900}
-  nav ul{display:flex;gap:1.6rem;list-style:none;align-items:center}
-  nav a{color:var(--ink);text-decoration:none;font-size:.95rem}
-  nav a:hover{color:var(--teal)}
-  .cartbtn{background:var(--teal);color:#fff;border:none;border-radius:var(--radius-pill);padding:.45rem 1rem;font-size:.9rem;cursor:pointer;transition:background .2s ease}
-  .cartbtn:hover{background:var(--teal-dark)}
-
-  .hero{max-width:1100px;margin:0 auto;padding:5.5rem 1.5rem 4.5rem;display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
-  .kicker{display:inline-block;color:var(--teal);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:1rem}
-  .hero h1{font-size:clamp(2.8rem,5.5vw,4rem);line-height:1.08;letter-spacing:-.015em;font-weight:400;margin-bottom:1.4rem}
-  .hero h1 em{font-style:normal;border-bottom:3px solid var(--orange)}
-  .hero p{color:var(--body);font-size:1.1rem;max-width:34rem;margin-bottom:2rem}
-  .ctarow{display:flex;gap:.8rem;flex-wrap:wrap}
-  .cta{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;padding:.8rem 1.7rem;border-radius:var(--radius-pill);font-weight:600;transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
-  .cta:hover{background:var(--orange-dark);transform:translateY(-1px);box-shadow:0 6px 16px rgba(224,122,74,.35)}
-  .cta.ghost{background:transparent;color:var(--teal);border:1.5px solid var(--teal);font-weight:600}
-  .cta.ghost:hover{background:var(--teal-tint);box-shadow:none}
-  .founders{border-top:1px solid var(--hairline);padding-top:1.2rem;margin-top:2rem;max-width:34rem}
-  .founders .vf{display:block;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--teal);margin-bottom:.2rem}
-  .founders span:last-child{font-size:.9rem;color:var(--muted)}
-
-  .herostage{position:relative;text-align:center;padding:2rem 0}
-  .herostage .halo{position:absolute;inset:0;margin:auto;width:min(340px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--teal-tint) 0%,rgba(234,241,240,0) 70%)}
-  .herostage .halo::after{content:";";position:absolute;font-family:Georgia,serif;font-size:22rem;color:rgba(20,85,95,.06);top:-4rem;right:-2rem;line-height:1}
-  .herostage img{position:relative;width:100%;max-width:340px;filter:drop-shadow(0 20px 18px rgba(30,42,50,.18))}
-  .herostage .cap{position:relative;font-size:.85rem;color:var(--muted);margin-top:1rem}
-  .herostage .cap b{color:var(--ink)}
-
-  .band{padding:6rem 0}
-  .band.white{background:#FFFFFF}
-  .band.teal{background:var(--teal);color:#F2F7F6}
-  .sechead{text-align:center;margin-bottom:3.5rem}
-  .sechead h2{font-size:clamp(1.9rem,3vw,2.6rem);letter-spacing:-.01em;color:var(--ink)}
-  .sechead p{color:var(--muted);max-width:40rem;margin:.6rem auto 0}
-  .band.teal .sechead h2{color:#fff}
-  .band.teal .sechead p{color:#CDE0DE;font-family:Georgia,serif;font-style:italic;font-size:1.15rem}
-
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
-  .product{background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--hairline);box-shadow:0 1px 3px rgba(30,42,50,.05);display:flex;flex-direction:column;transition:box-shadow .3s ease,border-color .3s ease}
-  .product:hover{border-color:#D8CFBC;box-shadow:0 12px 32px rgba(30,42,50,.10)}
-  .art{position:relative;background:#fff;aspect-ratio:1/1;overflow:hidden;border-bottom:1px solid var(--hairline)}
-  .art img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
-  .product:hover .art img{transform:scale(1.05)}
-  .give{position:absolute;top:.9rem;left:.9rem;background:rgba(255,255,255,.85);backdrop-filter:blur(4px);padding:.25rem .7rem;border-radius:var(--radius-pill);font-size:.7rem;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;font-weight:600}
-  .pbody{padding:1.4rem 1.5rem 1.6rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
-  .pname{font-family:Georgia,serif;font-weight:700;font-size:1.15rem}
-  .pdesc{font-size:.85rem;line-height:1.5;color:var(--muted);flex:1}
-  .prow{display:flex;align-items:center;justify-content:space-between;margin-top:.5rem}
-  .price{font-weight:600;color:var(--ink);font-size:1rem;font-variant-numeric:tabular-nums}
-  .add{background:none;color:var(--ink);border:1.5px solid var(--ink);border-radius:var(--radius-pill);padding:.45rem 1.1rem;cursor:pointer;font-size:.85rem;font-weight:600;transition:all .2s ease}
-  .add:hover{background:var(--ink);color:#fff}
-
-  .catpills{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin:-2rem 0 3rem}
-  .catpills a{border:1.5px solid var(--hairline);border-radius:var(--radius-pill);padding:.45rem 1.2rem;text-decoration:none;color:var(--ink);font-size:.9rem;font-weight:600;transition:all .2s ease}
-  .catpills a:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-tint)}
-  .colhead{margin:4rem 0 1.8rem;scroll-margin-top:6rem}
-  .colhead:first-of-type{margin-top:0}
-  .colhead h3{font-family:Georgia,serif;font-size:1.6rem;color:var(--ink)}
-  .colhead p{color:var(--muted);font-size:.95rem;margin-top:.2rem;max-width:44rem}
-  .comingsoon{border:1.5px dashed var(--hairline);border-radius:var(--radius);padding:2.5rem 2rem;text-align:center;background:var(--cream)}
-  .comingsoon .semi{font-family:Georgia,serif;font-size:2.2rem;color:var(--orange);line-height:1}
-  .comingsoon h4{font-family:Georgia,serif;font-size:1.2rem;margin:.6rem 0 .4rem}
-  .comingsoon p{color:var(--muted);font-size:.9rem;max-width:34rem;margin:0 auto}
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;text-align:center;margin-bottom:3.5rem}
-  .stat .num{font-family:Georgia,serif;font-size:2.6rem;color:#F2B279;line-height:1.1}
-  .stat .lab{font-size:.85rem;color:#CDE0DE;max-width:16rem;margin:.4rem auto 0}
-  .mcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
-  .mcard{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:1.8rem}
-  .mcard h3{font-family:Georgia,serif;font-size:1.15rem;margin-bottom:.6rem;color:#fff}
-  .mcard h3::before{content:"; ";color:#F2B279}
-  .mcard p{font-size:.9rem;color:#DCE9E7}
-
-  .story{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:center}
-  .memorial{text-align:center}
-  .memorial .semiBig{font-size:9rem;color:var(--orange);font-family:Georgia,serif;line-height:.9}
-  .memorial p{font-family:Georgia,serif;font-style:italic;font-size:1.05rem;color:var(--ink);max-width:16rem;margin:1.2rem auto 0;border-top:1px solid var(--hairline);padding-top:1.2rem}
-  .story h2{color:var(--ink);font-size:clamp(1.8rem,2.6vw,2.4rem);letter-spacing:-.01em;margin-bottom:1.2rem}
-  .story p{color:var(--body);font-size:1.05rem;line-height:1.75;max-width:56ch;margin-bottom:1rem}
-  .story p.lede{font-size:1.15rem}
-  .story .sig{font-family:Georgia,serif;font-style:italic;color:var(--teal)}
-
-  footer{background:var(--ink);color:#B9C4C9;padding:4rem 1.5rem 2.5rem}
-  .fwrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem}
-  footer h4{color:#fff;margin-bottom:.6rem;font-size:.95rem}
-  footer h4 .semi{color:#F2B279}
-  footer p,footer a{font-size:.85rem;color:#B9C4C9;text-decoration:none}
-  footer a:hover{color:#fff}
-  .f988{background:rgba(242,178,121,.12);border:1px solid rgba(242,178,121,.4);border-radius:var(--radius);padding:.8rem 1rem;margin-top:.8rem;font-size:.85rem}
-  .f988 b{color:#F2B279}
-  .f988 a{color:#F2B279;font-weight:700;text-decoration:underline;text-underline-offset:2px}
-  .copyright{max-width:1100px;margin:1.8rem auto 0;padding-top:1.2rem;border-top:1px solid #33424B;font-size:.75rem;color:#7E8D94;text-align:center}
-
-  .scrim{position:fixed;inset:0;background:rgba(30,42,50,.35);opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:90}
-  .scrim.show{opacity:1;pointer-events:auto}
-  .drawer{position:fixed;top:0;right:-380px;width:360px;max-width:92vw;height:100vh;background:#fff;box-shadow:-10px 0 40px rgba(0,0,0,.18);z-index:100;transition:right .25s ease;display:flex;flex-direction:column}
-  .drawer.open{right:0}
-  .dhead{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid #EEE}
-  .dclose{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--muted)}
-  .ditems{flex:1;overflow-y:auto;padding:1rem 1.5rem}
-  .ditem{display:flex;justify-content:space-between;gap:.6rem;padding:.6rem 0;border-bottom:1px dashed var(--hairline);font-size:.9rem}
-  .ditem .qty{color:var(--muted)}
-  .dempty{color:var(--muted);font-size:.9rem;text-align:center;margin-top:2rem}
-  .dfoot{padding:1rem 1.5rem;border-top:1px solid #EEE}
-  .subtotal{display:flex;justify-content:space-between;font-weight:700;margin-bottom:.8rem;font-variant-numeric:tabular-nums}
-  .checkout{width:100%;background:var(--orange);color:#fff;border:none;border-radius:var(--radius-pill);padding:.8rem;font-weight:600;cursor:pointer;transition:background .2s ease}
-  .checkout:hover{background:var(--orange-dark)}
-  .dnote{font-size:.75rem;color:var(--muted);text-align:center;margin-top:.6rem}
-
-  .toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:.7rem 1.4rem;border-radius:var(--radius-pill);font-size:.9rem;opacity:0;pointer-events:none;transition:all .25s ease;z-index:120}
-  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
-  @media(max-width:900px){
-    .grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
-  }
-  @media(max-width:820px){
-    .hero{grid-template-columns:1fr;padding-top:3rem;gap:2rem}
-    .story{grid-template-columns:1fr}
-    .memorial .semiBig{font-size:6rem}
-    .fwrap{grid-template-columns:1fr}
-    .stats{grid-template-columns:1fr;gap:1rem}
-    nav ul{gap:1rem}
-    nav ul li.hidesm{display:none}
-    .band{padding:4rem 0}
-  }
-  @media(max-width:560px){
-    .grid{grid-template-columns:1fr}
-  }
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -163,12 +14,13 @@
 
 <header>
   <div class="nav">
-    <a class="brand" href="#top">Max's Tees<span class="semi">;</span></a>
+    <a class="brand" href="index.html">Max's Tees<span class="semi">;</span></a>
     <nav>
       <ul>
-        <li><a href="#shop">Shop</a></li>
-        <li class="hidesm"><a href="#mission">Our Mission</a></li>
-        <li class="hidesm"><a href="#story">Max's Story</a></li>
+        <li><a href="awareness.html">Awareness</a></li>
+        <li><a href="veteran-line.html">Veteran Line</a></li>
+        <li><a href="basics.html">Basics</a></li>
+        <li class="hidesm"><a href="index.html#story">Max's Story</a></li>
         <li><button class="cartbtn" onclick="toggleDrawer()">Cart (<span id="cartCount">0</span>)</button></li>
       </ul>
     </nav>
@@ -180,9 +32,9 @@
     <div>
       <span class="kicker">Est. 2026</span>
       <h1>Something <em>good</em>, made from the hardest day.</h1>
-      <p>Max's Tees exists to keep a conversation going — about hope, about checking on the people you love, about asking for help. Every shirt is printed to order, and a portion of every sale supports suicide awareness and prevention.</p>
+      <p>Max's Tees exists to keep a conversation going — about hope, about checking on the people you love, about asking for help. Heavy premium cotton, printed only when you order, and a portion of every sale supports suicide awareness and prevention.</p>
       <div class="ctarow">
-        <a class="cta" href="#shop">Shop the Collection</a>
+        <a class="cta" href="awareness.html">Shop the Collections</a>
         <a class="cta ghost" href="#story">Why "Max's"?</a>
       </div>
       <div class="founders">
@@ -200,133 +52,34 @@
   <section id="shop" class="band white">
     <div class="wrap">
       <div class="sechead">
-        <h2>The Collection</h2>
-        <p>Original designs on heavy premium cotton, printed only when you order — no warehouses, no waste. Every shirt gives back.</p>
+        <h2>Shop the Collections</h2>
+        <p>Three lines, one job: put hope on people's backs. Every shirt gives back.</p>
       </div>
-      <div class="catpills">
-        <a href="#awareness">Awareness Collection</a>
-        <a href="#veteran">The Veteran Line</a>
-        <a href="#basics">The Basics</a>
-      </div>
-      <div class="colhead" id="awareness">
-        <h3>The Awareness Collection</h3>
-        <p>The heart of Max's Tees — designs that start conversations about hope, checking in, and asking for help.</p>
-      </div>
-      <div class="grid">
-
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/tee-still-here.jpg" alt="Heather gray tee with STILL HERE; in brush lettering and an orange semicolon"></div>
-          <div class="pbody">
-            <div class="pname">The Still Here Tee</div>
-            <div class="pdesc">Our founding design. The semicolon is the symbol of a story that keeps going.</div>
-            <div class="prow"><span class="price">$28</span><button class="add" onclick="addToCart('The Still Here Tee',28)">Add to Cart</button></div>
+      <div class="cattiles">
+        <a class="cattile" href="awareness.html">
+          <img src="img/tee-still-here.jpg" alt="The Awareness Collection — Still Here tee">
+          <div class="ct-body">
+            <h3>The Awareness Collection</h3>
+            <p>Designs that start conversations about hope, checking in, and asking for help.</p>
+            <span>Shop Awareness &rarr;</span>
           </div>
-        </div>
-
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/tee-sunrise.jpg" alt="Navy tee printed with a large sun setting over water, birds, and TOMORROW NEEDS YOU;"></div>
-          <div class="pbody">
-            <div class="pname">The Sunrise Tee</div>
-            <div class="pdesc">Because the sun keeps coming up — and tomorrow genuinely needs you in it.</div>
-            <div class="prow"><span class="price">$28</span><button class="add" onclick="addToCart('The Sunrise Tee',28)">Add to Cart</button></div>
+        </a>
+        <a class="cattile" href="veteran-line.html">
+          <img src="img/basic-olive.jpg" alt="The Veteran Line — military green tee">
+          <div class="ct-body">
+            <h3>The Veteran Line</h3>
+            <p>Edgier tees for those who served, from two Marines. First drop in the works.</p>
+            <span>Preview the Line &rarr;</span>
           </div>
-        </div>
-
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/tee-story.jpg" alt="Military green tee printed with NOT THE END OF YOUR STORY; and an underline stroke"></div>
-          <div class="pbody">
-            <div class="pname">The Not the End of Your Story Tee</div>
-            <div class="pdesc">A semicolon is where a sentence could have ended — and didn't. Neither does your story.</div>
-            <div class="prow"><span class="price">$26</span><button class="add" onclick="addToCart('The Not the End of Your Story Tee',26)">Add to Cart</button></div>
+        </a>
+        <a class="cattile" href="basics.html">
+          <img src="img/basic-white.jpg" alt="The Basics — blank premium tees in six colors">
+          <div class="ct-body">
+            <h3>The Basics</h3>
+            <p>The same heavy premium cotton, blank, in six colors. $18.</p>
+            <span>Shop Basics &rarr;</span>
           </div>
-        </div>
-
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/tee-heartbeat.jpg" alt="Navy tee printed with STILL HERE above a heartbeat line ending in a semicolon"></div>
-          <div class="pbody">
-            <div class="pname">The Heartbeat Tee</div>
-            <div class="pdesc">A pulse that runs straight into a semicolon. Still beating, still writing.</div>
-            <div class="prow"><span class="price">$28</span><button class="add" onclick="addToCart('The Heartbeat Tee',28)">Add to Cart</button></div>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/tee-logo.jpg" alt="Heather gray tee with the MAX'S TEES; logo, Wear Hope Est. 2026, and a sunset over water"></div>
-          <div class="pbody">
-            <div class="pname">The Classic Logo Tee</div>
-            <div class="pdesc">The flagship. Wear the name, carry the mission.</div>
-            <div class="prow"><span class="price">$26</span><button class="add" onclick="addToCart('The Classic Logo Tee',26)">Add to Cart</button></div>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/tee-you-matter.jpg" alt="Sand tee printed with You Matter in brush script, a semicolon, and Say It To Someone Today"></div>
-          <div class="pbody">
-            <div class="pname">The You Matter Tee</div>
-            <div class="pdesc">Sometimes the shirt says the thing before you find the words.</div>
-            <div class="prow"><span class="price">$26</span><button class="add" onclick="addToCart('The You Matter Tee',26)">Add to Cart</button></div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="colhead" id="veteran">
-        <h3>The Veteran Line</h3>
-        <p>Edgier cuts for the brothers and sisters who served — built by two Marines who know the weight and the humor it takes to carry it. A portion of this line supports veteran suicide prevention.</p>
-      </div>
-      <div class="comingsoon">
-        <div class="semi">;</div>
-        <h4>First drop in the works</h4>
-        <p>The designs are on the press. If you served, this line is for you — bold, irreverent, and dead serious about one thing: we don't lose people on our watch.</p>
-      </div>
-
-      <div class="colhead" id="basics">
-        <h3>The Basics</h3>
-        <p>The same heavy premium cotton our graphics ride on — blank, in six colors. Every basic gives back too.</p>
-      </div>
-      <div class="grid">
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/basic-white.jpg" alt="Blank white premium tee"></div>
-          <div class="pbody">
-            <div class="pname">The Basic Tee — White</div>
-            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — White',18)">Add to Cart</button></div>
-          </div>
-        </div>
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/basic-gray.jpg" alt="Blank heather gray premium tee"></div>
-          <div class="pbody">
-            <div class="pname">The Basic Tee — Heather Gray</div>
-            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Heather Gray',18)">Add to Cart</button></div>
-          </div>
-        </div>
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/basic-black.jpg" alt="Blank black premium tee"></div>
-          <div class="pbody">
-            <div class="pname">The Basic Tee — Black</div>
-            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Black',18)">Add to Cart</button></div>
-          </div>
-        </div>
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/basic-sand.jpg" alt="Blank sand premium tee"></div>
-          <div class="pbody">
-            <div class="pname">The Basic Tee — Sand</div>
-            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Sand',18)">Add to Cart</button></div>
-          </div>
-        </div>
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/basic-navy.jpg" alt="Blank navy premium tee"></div>
-          <div class="pbody">
-            <div class="pname">The Basic Tee — Navy</div>
-            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Navy',18)">Add to Cart</button></div>
-          </div>
-        </div>
-        <div class="product">
-          <div class="art"><span class="give">Gives back</span><img src="img/basic-olive.jpg" alt="Blank military green premium tee"></div>
-          <div class="pbody">
-            <div class="pname">The Basic Tee — Military Green</div>
-            <div class="prow"><span class="price">$18</span><button class="add" onclick="addToCart('The Basic Tee — Military Green',18)">Add to Cart</button></div>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -387,13 +140,14 @@
     </div>
     <div>
       <h4>Shop</h4>
-      <p><a href="#shop">The Collection</a></p>
-      <p><a href="#mission">Where the Money Goes</a></p>
-      <p><a href="#story">Max's Story</a></p>
+      <p><a href="awareness.html">The Awareness Collection</a></p>
+      <p><a href="veteran-line.html">The Veteran Line</a></p>
+      <p><a href="basics.html">The Basics</a></p>
     </div>
     <div>
       <h4>Company</h4>
-      <p><a href="#story">About Us</a></p>
+      <p><a href="index.html#mission">Where the Money Goes</a></p>
+      <p><a href="index.html#story">About Us</a></p>
     </div>
   </div>
   <div class="copyright">&copy; 2026 Max's Tees. All rights reserved. &bull; Site preview — not yet accepting orders.</div>
@@ -411,36 +165,6 @@
 </div>
 
 <div class="toast" id="toast"></div>
-
-<script>
-  const cart = {};
-  function addToCart(name, price){
-    cart[name] = cart[name] || {price, qty:0};
-    cart[name].qty++;
-    render();
-    toast(name + ' added to cart');
-  }
-  function render(){
-    let count=0, sub=0, html='';
-    for(const [name,item] of Object.entries(cart)){
-      count += item.qty; sub += item.qty*item.price;
-      html += `<div class="ditem"><span>${name} <span class="qty">&times;${item.qty}</span></span><span>$${item.qty*item.price}</span></div>`;
-    }
-    document.getElementById('cartCount').textContent = count;
-    document.getElementById('subtotal').textContent = '$'+sub;
-    document.getElementById('ditems').innerHTML = html || '<div class="dempty">Your cart is empty — go find a shirt that says something.</div>';
-  }
-  function toggleDrawer(){
-    document.getElementById('drawer').classList.toggle('open');
-    document.getElementById('scrim').classList.toggle('show');
-  }
-  let toastTimer;
-  function toast(msg){
-    const t = document.getElementById('toast');
-    t.textContent = msg; t.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(()=>t.classList.remove('show'), 2200);
-  }
-</script>
+<script src="assets/site.js"></script>
 </body>
 </html>
